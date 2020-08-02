@@ -1,0 +1,27 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Cargando...</p>
+</ngx-spinner>
+<html *ngIf="user.ok === false">
+<app-login></app-login>
+
+</html>
+
+<html *ngIf="user.ok === true">
+
+<head>
+    <title>Prueba Trabajo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+</head>
+
+<body>
+    <app-header></app-header>
+    <app-menu></app-menu>
+    <div class="content-padder content-background">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<div class="uk-section-small uk-section-default header">
+    <div class="uk-container uk-container-large">
+        <h1><span class="ion-speedometer"></span> Eliminar usuario</h1>
+        <ul class="uk-breadcrumb">
+            <li><a href="">Inicio</a></li>
+            <li><a routerLink="/usuario"><span>Usuarios</span></a></li>
+            <li><span>Eliminar usuario</span></li>
+        </ul>
+    </div>
+  </div>
+  
+  <div class="uk-section-small">
+    <div class="uk-container uk-container-large">
+      <div class="uk-grid-small" >
+        <div class="uk-card uk-card-default uk-card-body">
+          <p class="uk-text-large">Se eliminará el componente de manera permanente</p>
+          <p uk-margin>
+              <button class="uk-button uk-button-default" routerLink="/usuario" >Cancelar</button>
+              <button class="uk-button uk-button-danger" (click)=eliminar()>Aceptar</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
