@@ -1,0 +1,94 @@
+<div class="uk-section-small uk-section-default header">
+  <div class="uk-container uk-container-large">
+    <h1><span class="ion-speedometer"></span> Usuarios</h1>
+    <ul class="uk-breadcrumb">
+      <li><a routerLink="">Inicio</a></li>
+      <li><span>Usuarios</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- End No data -->
+<div class="uk-section-small" *ngIf="users.length == 0">
+  <div class="uk-container uk-container-large">
+    <div uk-alert>
+      <h2>No hay datos <i class="fas fa-table"></i></h2>
+    </div>
+  </div>
+</div>
+
+<div class="uk-section-small" *ngIf="users.length != 0">
+  <div class="uk-container uk-container-large">
+    <div uk-alert>
+      <div class="uk-navbar-left">
+        <div class="uk-search uk-search-navbar">
+          <span uk-search-icon></span>
+          <input class="uk-search-input" type="text" [(ngModel)]="term" placeholder="Buscar...">
+        </div>
+        <button class="uk-button uk-button-default" (click)="exportar()">
+          <i class="fas fa-file-excel fa-lg"></i> Exportar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="uk-section-small" *ngIf="users.length != 0">
+  <div class="uk-container uk-container-large">
+    <div>
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-overflow-auto">
+          <table class="uk-table uk-table-small uk-table-divider">
+            <thead>
+              <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Documento</th>
+                <th>Rol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users | filter:term | paginate: { itemsPerPage: 10, currentPage: p }"
+                [shAttachMenu]="menu" (contextmenu)="leftClick(user._id)">
+                <td> {{user.name}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.document}}</td>
+                <td>{{user.role}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="text-align: center;">
+            <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente">
+            </pagination-controls>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="floating-button" style="border-radius: 50%;" routerLink="/usuario/agregar">
+  <span class="plus-circle" uk-icon="plus"></span>
+</div>
+
+<!-- Clic derecho -->
+
+<sh-context-menu #menu>
+  <ng-template shContextMenuItem *ngIf="user._id === idUser">
+    <div routerLink="/usuario/editar/{{idUser}}">
+      <span uk-icon="icon: pencil"></span>
+      Editar Usuario
+    </div>
+  </ng-template>
+  <ng-template shContextMenuItem *ngIf="user._id != idUser">
+    <div routerLink="/usuario/eliminar/{{idUser}}">
+      <span uk-icon="icon: trash"></span>
+      Eliminar Usuario
+    </div>
+  </ng-template>
+</sh-context-menu>

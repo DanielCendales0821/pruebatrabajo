@@ -1,0 +1,81 @@
+<div class="uk-section-small uk-section-default header">
+  <div class="uk-container uk-container-large">
+    <h1><span class="ion-speedometer"></span> Editar Usuario</h1>
+    <ul class="uk-breadcrumb">
+      <li><a routerLink="">Inicio</a></li>
+      <li><a routerLink="/usuario">Usuarios</a></li>
+      <li><span>Editar Usuario</span></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Correo</label>
+            <input class="uk-input" type="email" formControlName="email" [(ngModel)]="user.email" />
+          </div> -->
+
+
+
+
+<div class="uk-section-small">
+  <div class="uk-container uk-container-large">
+    <div>
+      <div class="uk-card uk-card-default uk-card-body">
+
+        <form class="uk-grid-small" [formGroup]="formGroupUser" uk-grid (ngSubmit)="captureInformation()">
+
+          <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Nombres</label>
+            <input class="uk-input" type="text" formControlName="name" [(ngModel)]="user.name" />
+          </div>
+
+          <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Apellidos</label>
+            <input class="uk-input" type="text" formControlName="lastName" [(ngModel)]="user.lastName" />
+          </div>
+
+
+          <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Cedula</label>
+            <input class="uk-input" type="number" formControlName="document" [(ngModel)]="user.document" />
+          </div>
+
+          <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Rol</label>
+            <select class="uk-select" formControlName="role" disabled [(ngModel)]="user.role">
+              <option value="Administrador">Administrador</option>
+              <option value="Usuario">Usuario</option>
+            </select>
+          </div>
+          
+
+          <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Correo</label>
+            <input class="uk-input" type="email" formControlName="email" [(ngModel)]="user.email" />
+          </div>
+
+          <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Contraseña</label>
+            <input class="uk-input" type="password" formControlName="password" />
+          </div>
+
+
+          <div class="uk-width-1-2@s">
+            <label class="uk-form-label" for="form-stacked-text">Confirmacion Contraseña</label>
+            <input class="uk-input" type="password" formControlName="confirmpassword" />
+          </div>
+
+
+          <div class="uk-width-1-1@s uk-flex uk-flex-center">
+            <button class="uk-button uk-button-primary submitbutton" type="submit" [disabled]="!formGroupUser.valid">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

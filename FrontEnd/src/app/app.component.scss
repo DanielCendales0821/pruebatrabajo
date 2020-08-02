@@ -1,0 +1,120 @@
+:host ::ng-deep{
+.user{
+    text-align:center;
+    padding-bottom: 20px;
+}
+
+
+.navbar-filter{
+    background: #f8f8f8 !important;
+}
+.uk-icon{
+    color:rgb(255, 255, 255) !important;
+}
+.plus-circle{
+    padding: 30px;
+    color: white !important;
+}
+
+//Table
+
+thead{
+    background: #03a9f4;
+    tr{
+        th{
+            color: #fff;
+        }
+    }
+}
+
+textarea { resize: vertical; } 
+.inputfile{
+    border: dashed 2px;
+    width: 100% !important;
+    cursor: pointer;
+}
+
+.uk-form-custom{
+    width: 100%;
+}
+
+.submitbutton{
+    width: 50%;
+    margin-top: 20px;
+}
+
+#floating-button {
+    /* 
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    background: #009688 !important;
+    button{
+        color:white;
+        font-size: 20px;
+    }
+    p{
+        position: absolute;
+        top: 0;
+        display: block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        line-height: 55px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        animation: plus-out 0.3s;
+        transition: all 0.3s;
+    }
+}
+
+//End Table
+
+.uk-button-success
+{
+    background: #8bc34a !important;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.p-no-margin
+{
+    margin-top: -20px !important;
+}
+
+.up-badge
+{
+    margin-top: -15px !important;
+}
+
+//Cards
+.uk-card-custom
+{
+    padding: 0px 20px !important;
+    border-bottom: none !important;
+    .uk-width-auto{
+        margin-left: -20px;
+    }
+}
+
+//Colors
+//Backgrounds
+.blue{ background: #00a1f1 !important}
+.green{background: #7dbb00 !important;}
+//Text color
+.white-text{
+    color: white;
+}
+
+.no-margin-top{
+    margin-top: 0 !important;
+}
+
+}
