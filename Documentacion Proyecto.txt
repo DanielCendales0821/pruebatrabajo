@@ -6,8 +6,8 @@ Comandos y pasos Angular
     *luego npm start o ng serve el cual sea ois preferencia
 
     *en la pantalla inicial login 
-    *usuario: 
-    *contraseña: 
+    *usuario: daniel@gmail.com
+    *contraseña: daniel
 
 
     *luego de un login exitoso te redirecciona al inicio una pantalla con una descripcion visual basica
