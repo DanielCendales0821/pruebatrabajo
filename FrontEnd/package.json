@@ -23,7 +23,7 @@
     "@kolkov/angular-editor": "^0.13.1",
     "@types/html2canvas": "0.0.35",
     "angular-datatables": "^8.1.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "core-js": "^2.6.11",
     "crypto-js": "^4.0.0",
     "datatables.net": "^1.10.21",
