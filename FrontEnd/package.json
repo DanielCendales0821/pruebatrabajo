@@ -34,7 +34,7 @@
     "html2canvas": "^1.0.0-rc.3",
     "jquery": "^3.5.1",
     "jspdf": "^1.5.3",
-    "jszip": "^3.5.0",
+    "jszip": "^3.7.0",
     "ng2-charts": "^2.3.2",
     "ng2-pdf-viewer": "^5.3.4",
     "ng2-pdfjs-viewer": "^5.0.7",
